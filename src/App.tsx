@@ -1,22 +1,36 @@
-import * as React from 'react';
-import './App.css';
+import * as React from "react";
+import { connect } from "react-redux";
+import { selectActions } from "./actions/state/selectors";
+import { transport } from "./actions/transport";
+import { ActionList } from "./actions/ActionList";
+import { Action } from "./actions/types";
 
-import logo from './logo.svg';
+type AppProps = {
+    subscribe: any;
+};
 
-class App extends React.Component {
-  public render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+type AppState = {
+    actions: Action[];
 }
 
-export default App;
+class App extends React.Component<AppState & AppProps> {
+    public componentWillMount() {
+        this.props.subscribe();
+    };
+
+    public render() {
+        return <div>
+            <ActionList actions={this.props.actions}/>
+        </div>;
+    }
+}
+
+const mapStateToProps = (state) => ({
+    actions: selectActions(state),
+});
+
+const mapDispatchToProps = (dispatch, getState) => ({
+    subscribe: () => transport.subscribe(dispatch, getState),
+});
+
+export default connect<AppState, AppProps>(mapStateToProps, mapDispatchToProps)(App);
