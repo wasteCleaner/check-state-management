@@ -38,6 +38,53 @@ const config = {
                 loader: 'awesome-typescript-loader'
             },
             {
+                test: /\.pcss$/,
+                use: [
+                    require.resolve('style-loader'),
+                    {
+                        loader: require.resolve('css-loader'),
+                        options: {
+                            importLoaders: 1,
+                            modules: true,
+                            localIdentName: "[name]__[local]___[hash:base64:5]"
+                        },
+                    },
+                    {
+                        loader: require.resolve('postcss-loader'),
+                        options: {
+                            ident: 'postcss',
+                            plugins: () => [
+                                require('postcss-flexbugs-fixes'),
+                                require('autoprefixer')({
+                                    browsers: [
+                                        '>1%',
+                                        'last 4 versions',
+                                        'Firefox ESR',
+                                        'not ie < 9', // React doesn't support IE8 anyway
+                                    ],
+                                    flexbox: 'no-2009',
+                                }),
+                                require('postcss-modules-values'),
+                                require('postcss-cssnext'),
+                                require('css-mqpacker'),
+                                require('postcss-nested'),
+                            ],
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(svg)$/,
+                use: [
+                    {
+                        loader: 'svg-url-loader',
+                        options: {
+                            noquotes: true,
+                        },
+                    },
+                ],
+            },
+            {
                 test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
                 use: 'file-loader'
             },
