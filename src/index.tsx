@@ -10,7 +10,7 @@ import {
 import thunk from "redux-thunk";
 
 import App from "./App";
-import actions from "./actions/state/reducer";
+import actions from "./state/actions/reducer";
 
 const reducers = combineReducers({
     actions
@@ -26,7 +26,7 @@ setTimeout(() => {
     ReactDOM.unmountComponentAtNode(node);
     ReactDOM.render(
         <Provider store={store}>
-            <App/>
+            <App />
         </Provider>,
         node
     );

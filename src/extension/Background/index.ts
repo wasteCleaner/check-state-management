@@ -1,5 +1,5 @@
-import { addAction } from "../../actions/state/actions";
-import { ReduxAction } from "../../actions/types";
+import { addAction } from "../../state/actions/actions";
+import { ReduxAction } from "../../state/types";
 
 type UpdatedWindow = Window & {
   dispatch: (action: ReduxAction) => void;
