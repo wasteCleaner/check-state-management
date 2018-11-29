@@ -19,12 +19,16 @@ const connect = () => {
 
 const send = (action) => {
     if (!isConnected) connect();
-    connection.postMessage({type: GLOBAL_MESSAGE_TYPE, action: action});
+    connection.postMessage({ type: GLOBAL_MESSAGE_TYPE, data: action });
 };
 
 const handleMessages = (event) => {
     if (event && event.data && event.data.type && event.data.type === GLOBAL_MESSAGE_TYPE && event.data.action) {
-        send(event.data.action);
+        send({
+            action: event.data.action,
+            state: event.data.state,
+            selectorsResult: event.data.selectorsResult,
+        });
     }
 };
 

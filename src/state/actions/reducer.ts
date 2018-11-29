@@ -7,10 +7,7 @@ import {
   ACTIONS__DELETE_ACTION,
 } from "../constants";
 
-const initialState: Action[] = [
-  { type: 'test', action: { type: 'test' } },
-  { type: 'test2', action: { type: 'test2' } }
-];
+const initialState: Action[] = [];
 
 export default function (state = initialState, action: ReduxAction) {
   console.log(action);

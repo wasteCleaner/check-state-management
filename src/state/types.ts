@@ -1,6 +1,10 @@
 export type Action = {
     type: string,
-    action: ReduxAction
+    data: {
+        action: ReduxAction,
+        state?: any,
+        selectorsResult?: any,
+    }
 }
 
 export type ReduxAction = {
