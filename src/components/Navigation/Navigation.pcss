@@ -1,0 +1,34 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 44px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 15px 0;
+    cursor: pointer;
+
+    &.clean {
+        background-image: url("./assets/clean.svg");
+    }
+
+    &.filter {
+        background-image: url("./assets/filter.svg");
+    }
+
+    &.pause {
+        background-image: url("./assets/pause.svg");
+    }
+}

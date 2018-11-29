@@ -42,6 +42,7 @@
     "raw-loader": "^0.5.1",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
+    "svg-inline-loader": "^0.8.0",
     "svg-url-loader": "^2.3.2",
     "typescript": "^3.1.6",
     "webpack": "^4.26.0",

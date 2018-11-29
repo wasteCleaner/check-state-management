@@ -75,17 +75,10 @@ const config = {
             },
             {
                 test: /\.(svg)$/,
-                use: [
-                    {
-                        loader: 'svg-url-loader',
-                        options: {
-                            noquotes: true,
-                        },
-                    },
-                ],
+                loader: 'svg-url-loader'
             },
             {
-                test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
+                test: /\.(jpe?g|gif|png|woff|ttf|wav|mp3)$/,
                 use: 'file-loader'
             },
             {

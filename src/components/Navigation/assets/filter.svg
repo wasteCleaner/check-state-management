@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>filter-tool-black-shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-13.000000, -366.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="filter-tool-black-shape" transform="translate(13.000000, 366.000000)">
+                <path d="M17.923116,0.498634308 C17.7782048,0.166345766 17.5274158,0.000179107151 17.169542,0 L0.830033077,0 C0.472651032,0 0.22150441,0.166345766 0.0768167715,0.498634308 C-0.0677814437,0.847938029 -0.00826993335,1.1464201 0.255619574,1.39349841 L6.54912946,7.69596561 L6.54912946,13.9089688 C6.54912946,14.1308378 6.63001325,14.3223481 6.79164669,14.4845296 L10.0594143,17.7569516 C10.2127314,17.9187749 10.4041429,18 10.6340067,18 C10.7360392,18 10.842364,17.9785519 10.9530259,17.9359692 C11.2850563,17.790982 11.4511163,17.5396498 11.4511163,17.1817042 L11.4511163,7.69601039 L17.7444026,1.39354319 C18.0083815,1.14646487 18.0677589,0.848072359 17.923116,0.498634308 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
