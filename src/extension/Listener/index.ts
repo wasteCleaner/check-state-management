@@ -3,11 +3,26 @@ type UpdatedWindow = Window & {
     checkStoreExtensionID: string;
 }
 
+const runSelectors = (selectors, state) => {
+    let result = {};
+    Object.keys(selectors).forEach(key => {
+        result[key] = typeof selectors[key] === "object" ?
+            runSelectors(selectors[key], state) : selectors[key](state);
+    });
+
+    return result;
+};
+
 (window as UpdatedWindow).__checkStoreExtension__ = (options = {}) => (store) => (next) => (action) => {
-    let res = next(action);
+    const res = next(action);
+    const newStore = store.getState();
+    const selectorsResult = runSelectors(options, newStore);
+
     window.postMessage({
         type: "check-state-action",
         action: action,
+        state: newStore,
+        selectorsResult: selectorsResult,
     }, "*");
     return res;
 };

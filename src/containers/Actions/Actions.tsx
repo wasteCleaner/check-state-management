@@ -10,7 +10,7 @@ export class ActionsComponent extends React.Component<ActionListProps> {
     public render() {
         return <div className={styles.actions}>
             { this.props.actions.map((action, i) => {
-                return <Action action={action} key={i} />;
+                return <Action actionData={action} key={i} />;
             })}
         </div>;
     }
