@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { Action } from "../../components/Action";
 import { Action as IAction } from "../../state/types";
-import { selectActions } from "../../state/actions/selectors";
+import { selectActions } from "../../state/actions";
 import * as styles from "./Actions.pcss";
 
 export class ActionsComponent extends React.Component<ActionListProps> {
