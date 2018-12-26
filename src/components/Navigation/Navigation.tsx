@@ -9,7 +9,7 @@ const NavigationComponent = (props) => {
     return (
         <div className={styles.navigation}>
             <DownloadButton classNames={classnames(styles.icon, styles.download)} />
-            <div className={classnames(styles.icon, styles.pause)} />
+            {/*<div className={classnames(styles.icon, styles.pause)} />*/}
             <div className={classnames(styles.icon, styles.clean)} onClick={props.clearActions} />
         </div>
     );
