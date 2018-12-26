@@ -1,13 +1,36 @@
 .action {
     display: flex;
+    position: relative;
     padding: 6px 15px;
     flex-shrink: 0;
     background-color: #34495E;
     border-radius: 3px;
     margin-bottom: 10px;
+    cursor: pointer;
+    overflow: hidden;
+
+    .gradient {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 100%;
+        background: linear-gradient(to right, rgba(52,73,94,0) 0%,rgba(52,73,94,1) 100%);
+    }
+
+    &.active {
+        background-color: #435F7B;
+
+        .gradient {
+            background: linear-gradient(to right, rgba(67, 95, 123, 0) 0%, rgba(67, 95, 123, 1) 100%);
+        }
+    }
 }
 
 .actionType {
     font-size: 15px;
     color: #1ABC9C;
 }
+
+

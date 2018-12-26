@@ -1,5 +1,8 @@
 export {
     clearActions,
     addAction,
+    selectAction,
+    selectSelector,
+    unselectSelectors,
 } from "./actions";
-export { selectActions } from "./selectors";
+export * from "./selectors";

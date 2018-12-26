@@ -1,0 +1,53 @@
+.result {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.name {
+    flex-shrink: 0;
+    font-size: 15px;
+    color: #1ABC9C;
+}
+
+.value {
+    flex-shrink: 1;
+    font-size: 15px;
+    color: #eb974e;
+}
+
+.primitiveLine {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px 0 5px 10px;
+
+    .name {
+        padding-right: 5px;
+    }
+}
+
+.structuredLine {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px 0 5px 10px;
+
+    .value {
+        width: 100%;
+        padding-left: 10px;
+    }
+}
+
+.arrayBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-left: 2px solid rgba(26, 188, 156, 0.15);
+}
+
+.arrayElem {
+    border-bottom: 2px solid rgba(26, 188, 156, 0.15);
+}
+
