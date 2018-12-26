@@ -26,5 +26,5 @@ const runSelectors = (selectors, state) => {
     return res;
 };
 
-(window as UpdatedWindow).checkStoreExtensionID = 'edjbmeghokokegieplmnkjceacineppf';
+(window as UpdatedWindow).checkStoreExtensionID = 'lhhbnkkjefhgnlfjhjdbnijiikiofgbc';
 
