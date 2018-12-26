@@ -6,8 +6,7 @@ type UpdatedWindow = Window & {
 const runSelectors = (selectors, state) => {
     let result = {};
     Object.keys(selectors).forEach(key => {
-        result[key] = typeof selectors[key] === "object" ?
-            runSelectors(selectors[key], state) : selectors[key]({...state});
+        result[key] = selectors[key]({...state});
     });
 
     return result;
