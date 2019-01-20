@@ -1,4 +1,4 @@
-#Redux CheckState (selectors testing)
+# Redux CheckState (selectors testing)
 
 ![scr-1](https://user-images.githubusercontent.com/19432543/51444135-4ebf3180-1cfc-11e9-857b-52e3742dd042.png)
 
