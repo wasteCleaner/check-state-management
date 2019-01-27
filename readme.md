@@ -26,7 +26,7 @@ You can see an example of implementation in our [example application](https://gi
 ## Usage
 This extension is need for create test cases for testing selectors in your application, so, after the implementation of middleware you need to build and run you application.
 After running your application just open chrome devtools (cmd + option + i) and select `CheckState` tab here. 
-Now, if application dispatched actions you will be able to see thi action in this tab. You also can click on action to see more details (actual selectors results).
+Now, if application dispatched actions you will be able to see this action in this tab. You also can click on action to see more details (actual selectors results).
 You need to use your application to catch as more actions as possible. When this process is done just click `Download` button (on left bar) and save test cases in `/src` folder of your project.
 
 That's it, all tests ready to run.
